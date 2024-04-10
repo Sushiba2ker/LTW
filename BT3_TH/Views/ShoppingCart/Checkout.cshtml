@@ -1,0 +1,31 @@
+@model Order
+
+<div class="container mt-5">
+    <div class="card">
+        <div class="card-header">
+            <h2 class="mb-0">Checkout</h2>
+        </div>
+        <div class="card-body">
+            <form asp-action="Checkout" method="post">
+                <div class="mb-3">
+                    <label for="ShippingAddress" class="form-label">
+                        <i class="fas fa-shipping-fast"></i> Shipping Address
+                    </label>
+                    <input asp-for="ShippingAddress" class="form-control" id="ShippingAddress" placeholder="1234 Main St"/>
+                </div>
+                <div class="mb-3">
+                    <label for="Notes" class="form-label">
+                        <i class="fas fa-sticky-note"></i> Notes
+                    </label>
+                    <textarea asp-for="Notes" class="form-control" id="Notes" rows="3" placeholder="Any special instructions?"></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">
+                    <i class="fas fa-paper-plane"></i> Place Order
+                </button>
+            </form>
+        </div>
+    </div>
+</div>
+
+<!-- Optional: Include FontAwesome for icons -->
+<link href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" rel="stylesheet">
